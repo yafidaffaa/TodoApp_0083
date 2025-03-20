@@ -245,6 +245,14 @@ class _TodoPageState extends State<TodoPage> {
                               ],
                             ),
                           ),
+                          Checkbox(
+                            value: isChecked,
+                            onChanged: (bool? value) {
+                              doneTask(index, value);
+                            },
+                            checkColor: Colors.white,
+                            activeColor: Colors.green,
+                          ),
                         ],
                       ),
                     );
