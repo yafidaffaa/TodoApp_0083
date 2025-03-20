@@ -156,6 +156,11 @@ class _TodoPageState extends State<TodoPage> {
                             setState(() {
                               _timeError = _selectedDateTime == null;
                             });
+                            if (_key.currentState!.validate() && !_timeError) {
+                              addData();
+                              _key.currentState!.reset();
+                              FocusScope.of(context).unfocus();
+                            }
                           },
                           child: Text('Submit'),
                         ),
