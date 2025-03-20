@@ -23,7 +23,12 @@ class _TodoPageState extends State<TodoPage> {
         'Pilih Tanggal & Waktu',
         style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
       ),
-
+      onSubmit: (selectedDateTime) {
+        setState(() {
+          _selectedDateTime = selectedDateTime;
+          _timeError = false;
+        });
+      },
       backgroundColor: Colors.white,
     ).show(context);
   }
