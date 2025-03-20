@@ -196,7 +196,35 @@ class _TodoPageState extends State<TodoPage> {
                       margin: const EdgeInsets.symmetric(vertical: 8),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [],
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '${listTugas[index]['task']}',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                SizedBox(height: 5),
+                                Text(
+                                  'Deadline: ${listTugas[index]['time']}',
+                                  style: TextStyle(
+                                    color: const Color.fromARGB(
+                                      255,
+                                      142,
+                                      216,
+                                      255,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     );
                   },
