@@ -166,6 +166,19 @@ class _TodoPageState extends State<TodoPage> {
                         ),
                       ],
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'List Tasks',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
