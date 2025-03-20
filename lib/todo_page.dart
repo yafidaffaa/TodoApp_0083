@@ -114,6 +114,12 @@ class _TodoPageState extends State<TodoPage> {
                       children: [
                         Expanded(
                           child: TextFormField(
+                            validator: (value) {
+                              if (value!.isEmpty) {
+                                return 'Please enter some task';
+                              }
+                              return null;
+                            },
                             autovalidateMode:
                                 AutovalidateMode.onUserInteraction,
                             controller: _taskController,
