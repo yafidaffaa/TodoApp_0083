@@ -221,6 +221,27 @@ class _TodoPageState extends State<TodoPage> {
                                     ),
                                   ),
                                 ),
+                                SizedBox(height: 5),
+                                Text(
+                                  isChecked ? 'Done' : 'Not Done',
+                                  style: TextStyle(
+                                    color:
+                                        isChecked
+                                            ? const Color.fromARGB(
+                                              255,
+                                              101,
+                                              232,
+                                              105,
+                                            )
+                                            : const Color.fromARGB(
+                                              255,
+                                              196,
+                                              42,
+                                              31,
+                                            ),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
