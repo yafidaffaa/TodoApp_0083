@@ -59,6 +59,50 @@ class _TodoPageState extends State<TodoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(child: const Text('Form Page'))),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              Form(
+                key: _key,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Task Date',
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                            Text(
+                              _selectedDateTime == null
+                                  ? "Select a Date"
+                                  : DateFormat(
+                                    'dd-MM-yyyy HH:mm',
+                                  ).format(_selectedDateTime!),
+                              style: const TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
