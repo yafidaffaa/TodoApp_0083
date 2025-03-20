@@ -33,6 +33,12 @@ class _TodoPageState extends State<TodoPage> {
     ).show(context);
   }
 
+  void doneTask(int index, bool? value) {
+    setState(() {
+      listTugas[index]['isChecked'] = value!;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
