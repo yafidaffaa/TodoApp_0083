@@ -150,6 +150,15 @@ class _TodoPageState extends State<TodoPage> {
                             ),
                           ),
                         ),
+                        SizedBox(width: 10),
+                        FilledButton(
+                          onPressed: () {
+                            setState(() {
+                              _timeError = _selectedDateTime == null;
+                            });
+                          },
+                          child: Text('Submit'),
+                        ),
                       ],
                     ),
                   ],
