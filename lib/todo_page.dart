@@ -92,6 +92,14 @@ class _TodoPageState extends State<TodoPage> {
                                 fontSize: 16,
                               ),
                             ),
+                            if (_timeError)
+                              Text(
+                                'Please select a date',
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 12,
+                                ),
+                              ),
                           ],
                         ),
                       ],
