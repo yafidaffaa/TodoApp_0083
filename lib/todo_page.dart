@@ -17,6 +17,17 @@ class _TodoPageState extends State<TodoPage> {
 
   List<Map<String, dynamic>> listTugas = [];
 
+  void pickDateTime() {
+    BottomPicker.dateTime(
+      pickerTitle: Text(
+        'Pilih Tanggal & Waktu',
+        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      ),
+
+      backgroundColor: Colors.white,
+    ).show(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
