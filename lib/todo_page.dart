@@ -102,6 +102,11 @@ class _TodoPageState extends State<TodoPage> {
                               ),
                           ],
                         ),
+                        IconButton(
+                          color: Colors.blue,
+                          onPressed: pickDateTime,
+                          icon: Icon(Icons.date_range),
+                        ),
                       ],
                     ),
                   ],
