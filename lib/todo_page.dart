@@ -39,6 +39,22 @@ class _TodoPageState extends State<TodoPage> {
     });
   }
 
+  void addData() {
+    if (_selectedDateTime == null || _taskController.text.trim().isEmpty) {
+      return;
+    }
+
+    setState(() {
+      listTugas.add({
+        'task': _taskController.text.trim(),
+        'time': DateFormat('dd-MM-yyyy HH:mm').format(_selectedDateTime!),
+        'isChecked': false,
+      });
+    });
+    _taskController.clear();
+    _selectedDateTime = null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
